@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Jersey+20&display=swap');
+body {
+    font-family: "Jersey 20", sans-serif;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);   
+}
+p{
+    display: flex;
+    margin: 2px;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    transition: all 1s;
+}
+input{
+    display: none;
+}
+#elige-mascota{
+    height: 100 vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(6, 6, 6);
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    font-size: 10vw;
+    font-size: 7vmax;
+    margin: 0;
+    text-shadow: 0 0 3px;
+}
+#emoticon{
+    text-align: center;
+    font-size: 7vw;
+}
+.subtitulo{
+    display: flex;
+    width: 70%;
+    text-align: left;
+    justify-content: left;
+    color: #f4f5f6;
+    text-shadow: -0 0 3px black;
+    background: rgb(70,68,69);
+    background: linear-gradient(90deg, rgba(70,68,69,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 4vw;
+    margin: 5px;
+}
+.tarjetas{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 55%;
+    max-width: 400px;
+    justify-content: space-evenly;
+}
+.tarjeta-de-mokepon{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: steelblue;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: large;
+    border-radius: 50px;   
+    position: relative;
+    filter: drop-shadow(4px 4px 10px black);
+    box-shadow: inset 10px 10px 10px gainsboro, inset -10px -10px 10px;
+    transition: all 1s; 
+}
+.tarjeta-de-mokepon:hover{
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+    font-weight: bold;
+    position: relative;
+    filter: drop-shadow(4px 4px 10px black);
+    box-shadow: inset -3px -3px 3px gainsboro, inset 3px 3px 3px; 
+}
+.tarjeta-de-mokepon:active{
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+.inputmascota:checked + .tarjeta-de-mokepon{
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    border: 2px black;
+    background-color: lightblue;
+}
+.tarjeta-de-mokepon:target{
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    border: 2px black;
+}
+.tarjeta-de-mokepon img{
+    width: 60px;
+}
+button{
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+    width: 155px;
+    height: 32px;
+    transition: all 1s;
+}
+button:focus{
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+button:hover{
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+button:active{
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+button[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #999999;
+    cursor: not-allowed;
+    pointer-events: none;
+    background-image: radial-gradient(100% 100% at 100% 0, rgb(70, 68, 69) 0, rgb(70, 68, 69) 100%);;
+}
+#areacombate{
+    display: grid;
+    grid-template-columns: 42% 16% 42%;
+    grid-template-rows: 13% 48% 13% 13% 13%;
+    justify-items: center;
+    width: 80%;
+    height: 250PX;
+}
+#mascota-jugador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row-start: 2;
+}
+#masc-jug-nombre{
+    grid-row-start: 2;
+}
+#contador-jugador{
+    grid-row-start: 3;
+    align-self: center;
+}
+#batalla-jugador{
+    grid-row-start: 5;
+    grid-column-start: 1;
+}
+#titulo-ene{
+    grid-column-start: 3;
+}
+#masc-ene-nombre{
+    grid-column-start: 3;
+}
+#mascota-enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contador-enemigo{
+    grid-row-start: 3;
+    align-self: center;
+}
+#batalla-enemigo{
+    grid-row-start: 5;
+    grid-column-start: 3;
+}
+#batalla-resultado{
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+#elige-ataque{
+    height: 100 vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#elige-ataque img{
+    width: 100px;
+}
+#boton-ataque{
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+}
+#mensajes{
+    display: flex;
+    flex-direction: column-reverse;
+}
+#finjuego{
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(45 35 66 / 62%);;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 4vw;
+    width: 90%;
+    text-align: center;
+}
+#finjuego[disabled]{
+    background: rgb(248, 248, 249);
+    border-radius: 5px;
+    font-size: xx-small;
+    transition: all 2s;
+}
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+}

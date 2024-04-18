@@ -1,0 +1,105 @@
+<!--Index para Mokepon-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>💧🏔️🔥 MoKePoN! 💧🏔️🔥</title>
+        <script src="./JS/mokepon.js"></script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        
+        
+        <section id="elige-mascota">
+            <h1 class="titulo" id="titulo-id"><div id="emoticon">💧🏔️🔥</div> <div>MoKePoN!</div> <div id="emoticon">💧🏔️🔥</div></h1>
+            <h2 class="subtitulo">Elige Tu Mascota</h2>
+
+            <div class="tarjetas">
+                <input type="radio" class="inputmascota" name="mascota" id="aguamon"/>
+                <label for="aguamon" class="tarjeta-de-mokepon">
+                    <p>Aguamon</p>
+                    <img src="./mascotas/aguamon.png" alt="">
+                </label>
+                
+                <input type="radio" class="inputmascota" name="mascota" id="tierramon"/>
+                <label for="tierramon" class="tarjeta-de-mokepon">
+                    <p>Tierramon</p>
+                    <img src="./mascotas/tierramon.png" alt="">
+                </label>   
+                
+                <input type="radio" class="inputmascota" name="mascota" id="fuegomon"/>
+                <label for="fuegomon" class="tarjeta-de-mokepon">
+                    <p>Fuegomon</p>
+                    <img src="./mascotas/fuegomon.png" alt="">
+                </label>
+                
+                <input type="radio" class="inputmascota" name="mascota" id="vapormon"/>      
+                <label for="vapormon" class="tarjeta-de-mokepon">
+                    <p>Vapormon</p>
+                    <img src="./mascotas/vapormon.png" alt="">
+                </label>
+                
+                <input type="radio" class="inputmascota" name="mascota" id="lodomon"/>
+                <label for="lodomon" class="tarjeta-de-mokepon">
+                    <p>Lodomon</p>
+                    <img src="./mascotas/lodomon.png" alt="">
+                </label>
+                
+                <input type="radio" class="inputmascota" name="mascota" id="lavamon"/>
+                <label for="lavamon" class="tarjeta-de-mokepon">
+                    <p>Lavamon</p>
+                    <img src="./mascotas/lavamon.png" alt="">
+                </label>
+                
+            </div>
+                       
+            <br>
+            <button id="boton-mascota">Elegir</button>
+            <br>
+            <button id="boton-enemigo">Enemigo Ramdom</button>
+        </section>
+
+        <section id="elige-ataque">
+            <h1 id="titulo-id" class="titulo"><div id="emoticon">💧🏔️🔥</div> <div>MoKePoN!</div> <div id="emoticon">💧🏔️🔥</div></h1>
+            
+            <div id="areacombate">
+                <!--<section id="mascota-juga">-->
+                <p id="titulo-jug">Mascota Jugador</p>
+                <p id="masc-jug-nombre"><span id="mascota-jugador">-</span></p>
+                <div class="vidasconta" id="contador-jugador"> Tiene <span id="vida-jugador">3</span><span id="vidaj"> vidas</span></div>
+                <p id="batalla-jugador"></p>
+                    
+                    
+                <!--</section>-->
+                <p id="batalla-resultado">VS</p>
+                <!--<section id="mascota-nene">-->
+                <p id="titulo-ene">Mascota Enemiga</p>
+                <p id="masc-ene-nombre"><span id="mascota-enemigo">-</span></p>
+                <div class="vidasconta" id="contador-enemigo"> Tiene <span id="vida-enemigo">3</span> <span id="vidae"> vidas</span></div>
+                <p id="batalla-enemigo"></p>
+                <!--</section>-->
+            </div>
+            <div>
+                
+                
+                
+            </div>
+            
+            <h2 id="texto-ataque">Elige Tu Ataque</h2>   
+            <p id="boton-ataque">
+                <button name = "click-ataque" id="boton-fuego">🔥 Fuego 🔥</button>
+                <button name = "click-ataque" id="boton-tierra">🏔️ Tierra 🏔️</button>
+                <button name = "click-ataque" id="boton-agua">💧 Agua 💧</button>
+            </p>
+            <section id="reiniciar">
+                <button>Reiniciar</button>
+            </section>        
+        
+            <section id="mensajes">
+                <p id="viejo">---------</p>
+            </section>
+        </section>
+
+    </body>
+</html>
